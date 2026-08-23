@@ -1,1 +1,1 @@
-# my_calculator
+# currency_converter
