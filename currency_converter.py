@@ -10,12 +10,17 @@ def usd_to_gbp(amount):
     return amount * 0.74
 
 
+def usd_to_krw(amount):
+    return amount * 1380.00
+
+
 def main():
     print("Currency Converter")
     print("------------------")
     print("1. USD → EUR")
     print("2. USD → JPY")
     print("3. USD → GBP")
+    print("4. USD → KRW")
 
     choice = input("Choose a conversion: ")
     amount = float(input("Enter amount in USD: "))
@@ -31,6 +36,10 @@ def main():
     elif choice == "3":
         result = usd_to_gbp(amount)
         print(f"${amount:.2f} USD = £{result:.2f} GBP")
+
+    elif choice == "4":
+        result = usd_to_krw(amount)
+        print(f"${amount:.2f} USD = ₩{result:.2f} KRW")
 
     else:
         print("Invalid choice")
