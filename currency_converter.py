@@ -19,6 +19,10 @@ def usd_to_mxn(amount):
     return amount * 18.50
 
 
+def usd_to_inr(amount):
+    return amount * 87.00
+
+
 def main():
     print("Currency Converter")
     print("------------------")
@@ -27,6 +31,7 @@ def main():
     print("3. USD → GBP")
     print("4. USD → KRW")
     print("5. USD → MXN")
+    print("6. USD → INR")
 
     choice = input("Choose a conversion: ")
     amount = float(input("Enter amount in USD: "))
@@ -50,6 +55,10 @@ def main():
     elif choice == "5":
         result = usd_to_mxn(amount)
         print(f"${amount:.2f} USD = ${result:.2f} MXN")
+
+    elif choice == "6":
+        result = usd_to_inr(amount)
+        print(f"${amount:.2f} USD = ₹{result:.2f} INR")
 
     else:
         print("Invalid choice")
