@@ -23,6 +23,10 @@ def usd_to_inr(amount):
     return amount * 87.00
 
 
+def usd_to_aud(amount):
+    return amount * 0.65
+
+
 def main():
     print("Currency Converter")
     print("------------------")
@@ -32,6 +36,7 @@ def main():
     print("4. USD → KRW")
     print("5. USD → MXN")
     print("6. USD → INR")
+    print("7. USD → AUD")
 
     choice = input("Choose a conversion: ")
     amount = float(input("Enter amount in USD: "))
@@ -59,6 +64,10 @@ def main():
     elif choice == "6":
         result = usd_to_inr(amount)
         print(f"${amount:.2f} USD = ₹{result:.2f} INR")
+
+    elif choice == "7":
+        result = usd_to_aud(amount)
+        print(f"${amount:.2f} USD = A${result:.2f} AUD")
 
     else:
         print("Invalid choice")
