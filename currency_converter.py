@@ -27,6 +27,10 @@ def usd_to_aud(amount):
     return amount * 0.65
 
 
+def usd_to_cad(amount):
+    return amount * 1.37
+
+
 def main():
     print("Currency Converter")
     print("------------------")
@@ -37,6 +41,7 @@ def main():
     print("5. USD → MXN")
     print("6. USD → INR")
     print("7. USD → AUD")
+    print("8. USD → CAD")
 
     choice = input("Choose a conversion: ")
     amount = float(input("Enter amount in USD: "))
@@ -69,10 +74,15 @@ def main():
         result = usd_to_aud(amount)
         print(f"${amount:.2f} USD = A${result:.2f} AUD")
 
+    elif choice == "8":
+        result = usd_to_cad(amount)
+        print(f"${amount:.2f} USD = C${result:.2f} CAD")
+
     else:
         print("Invalid choice")
 
 
 if __name__ == "__main__":
     main()
+
 
